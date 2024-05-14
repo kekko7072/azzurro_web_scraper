@@ -1,6 +1,14 @@
 import json
 from excel_load import get_links_from_excel
 from scrape import scrape_from_link
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the API key from environment variables
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Replace 'path_to_your_file.xlsx' with the path to your Excel file
 values = get_links_from_excel('code/websites.xlsx')
