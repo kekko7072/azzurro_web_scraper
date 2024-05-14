@@ -8,7 +8,7 @@ def scrape_from_link(OPENAI_API_KEY: str, link: str):
         config={
             "llm": {
                 "api_key": OPENAI_API_KEY,
-                "model": "gpt-4o",
+                "model": "gpt-4",
             },
         }
     )

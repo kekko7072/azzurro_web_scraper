@@ -21,7 +21,7 @@ for index, (key, val) in enumerate(values.items()):
 
     # Attempt to scrape and handle potential failures gracefully
     try:
-        scraped_data = scrape_from_link(val['LINK'])
+        scraped_data = scrape_from_link(OPENAI_API_KEY, val['LINK'])
         results.append({val['NAME']: scraped_data})
     except Exception as e:
         print(f"Failed to scrape {val['LINK']}: {e}")
